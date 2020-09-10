@@ -49,8 +49,8 @@ let roster = [
   }
 ]
 ```
-
-  #### Count the number of players
+#
+  ### Count the number of players
 Write a function `countPlayers` that accepts one argument, the roster of players as an array.
 
 It should return the total number of players on the roster.
@@ -62,7 +62,7 @@ return roster.length;
 
 countPlayers(roster)
 ```
-
+#
   ##### Find the top scoring player
 Write a function `topScoringPlayer` that accepts one argument, the roster of players as an array.
 
@@ -82,7 +82,7 @@ topScore.sort(function(a,b) {
 
 topScoringPlayer(roster)
 ```
-
+#
 ##### List players names and numbers for their jerseys
 Write a function `namesAndNumbers` that accepts one argument, the roster of players as an array.
 
@@ -100,6 +100,7 @@ If the roster only had the three example players as above, the function should r
   "Carlson Morin\n12"
 ]
 ```
+#
 ##### Do we have enough players at each position?
 We need to see the number of players at each position, so that we can make sure that we have all the players we need.
 
