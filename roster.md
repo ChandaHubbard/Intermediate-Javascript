@@ -1,17 +1,17 @@
 https://www.qualified.io/assess/5e824a2010a17c0014a081ba/challenges/5e791dbba224a50013c7e391
 
-#### Instructions
+## Instructions
 Read the scenario description and the instructions. Then implement the functions in the solution file, per the descriptions here. Click the 'Submit Solution' button to run the tests to get feedback on whether your functions are working.
 
-#### Scenario
+### Scenario
 The football team needs help managing their roster! Use your javascript skills to help us solve these challenges:
 
 - Count the number of players
 - Find the top scoring player
 - List players names and numbers for their jerseys
 - Do we have enough players at each position?
-- Given the roster and a position, count the number of players at that position
-- Given the roster and a list of positions, return an object with the count for each position
+  - Given the roster and a position, count the number of players at that position
+  - Given the roster and a list of positions, return an object with the count for each position
 
 For all of the functions, the roster will look like this:
 
@@ -50,24 +50,43 @@ let roster = [
 ]
 ```
 
-##### Count the number of players
-Write a function countPlayers that accepts one argument, the roster of players as an array.
+  #### Count the number of players
+Write a function `countPlayers` that accepts one argument, the roster of players as an array.
 
 It should return the total number of players on the roster.
 
-##### Find the top scoring player
-Write a function topScoringPlayer that accepts one argument, the roster of players as an array.
+```
+function countPlayers(roster) {
+return roster.length;
+}
 
-It should return the player in the roster with the highest score.
+countPlayers(roster)
+```
 
-It should return the whole player object (not the name or any other value from the player object)
-If the array is empty, it should return null
-If two players have the same score, it should return the one that appears first in the list
+  ##### Find the top scoring player
+Write a function `topScoringPlayer` that accepts one argument, the roster of players as an array.
+
+  - It should return the player in the roster with the highest score.
+    - It should return the whole player object (not the name or any other value from the player object)
+    - If the array is empty, it should return `null`
+    - If two players have the same score, it should return the one that appears first in the list
+
+```
+function topScoringPlayer(roster) {
+let topScore = roster.slice(0)
+topScore.sort(function(a,b) {
+  return b.pointsScored - a.pointsScored
+})
+  console.log(topScore[0])
+}
+
+topScoringPlayer(roster)
+```
 
 ##### List players names and numbers for their jerseys
-Write a function namesAndNumbers that accepts one argument, the roster of players as an array.
+Write a function `namesAndNumbers` that accepts one argument, the roster of players as an array.
 
-It should return an array of strings with the players' names and numbers as they'll appear on the back of the jersey. So, a player with name: "Allen Hicks" and number 10 should have a jersey string "Allen Hicks\n10".
+It should return an array of strings with the players' names and numbers as they'll appear on the back of the jersey. So, a player with name: `"Allen Hicks"` and number `10` should have a jersey string `"Allen Hicks\n10"`.
 
 The return value should be an array
 The return value should have one string for each player in the roster
