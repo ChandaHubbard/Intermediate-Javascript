@@ -63,7 +63,7 @@ return roster.length;
 countPlayers(roster)
 ```
 #
-  ##### Find the top scoring player
+  ### Find the top scoring player
 Write a function `topScoringPlayer` that accepts one argument, the roster of players as an array.
 
   - It should return the player in the roster with the highest score.
@@ -83,16 +83,14 @@ topScore.sort(function(a,b) {
 topScoringPlayer(roster)
 ```
 #
-##### List players names and numbers for their jerseys
+### List players names and numbers for their jerseys
 Write a function `namesAndNumbers` that accepts one argument, the roster of players as an array.
-
-It should return an array of strings with the players' names and numbers as they'll appear on the back of the jersey. So, a player with name: `"Allen Hicks"` and number `10` should have a jersey string `"Allen Hicks\n10"`.
-
-The return value should be an array
-The return value should have one string for each player in the roster
-The strings need to match exactly what is described (the tests are not forgiving)
-namesAndNumbers(roster)
-If the roster only had the three example players as above, the function should return:
+  - It should return an array of strings with the players' names and numbers as they'll appear on the back of the jersey. So, a player with name: `"Allen Hicks"` and number `10` should have a jersey string `"Allen Hicks\n10"`.
+  - The return value should be an array
+  - The return value should have one string for each player in the roster
+  - The strings need to match exactly what is described (the tests are not forgiving)
+`namesAndNumbers(roster)`
+- If the roster only had the three example players as above, the function should return:
 ```
 [
   "Allen Hicks\n10",
@@ -101,30 +99,31 @@ If the roster only had the three example players as above, the function should r
 ]
 ```
 #
-##### Do we have enough players at each position?
+### Do we have enough players at each position?
 We need to see the number of players at each position, so that we can make sure that we have all the players we need.
 
-  ##### Part 1: Given the roster and a position, count the number of players at that position
-Write a function countPlayersAtPosition that accepts two arguments, the roster of players as an array and a position as a string.
+  #### Part 1: Given the roster and a position, count the number of players at that position
+  - Write a function `countPlayersAtPosition` that accepts two arguments, the roster of players as an array and a position as a string.
+  - It should return the number of players who play in that position.
+  - For instance, in the whole roster, there are 6 players who have position `'c'`, so the function should return 6, as shown:
 
-It should return the number of players who play in that position.
-
-For instance, in the whole roster, there are 6 players who have position 'c', so the function should return 6, as shown:
-
-countPlayersAtPosition(roster, 'c') //=> 6
-  ##### Part 2: Given the roster and a list of positions, return an object with the count for each position
-Write a function countPositions that accepts two arguments, the roster as an array, and an array of strings representing positions.
+`countPlayersAtPosition(roster, 'c') //=> 6`
+  #### Part 2: Given the roster and a list of positions, return an object with the count for each position
+Write a function `countPositions` that accepts two arguments, the roster as an array, and an array of strings representing positions.
 
 It should return an object with the count for each position.
 
 If called like this:
 
-countPositions(roster, ['c', 'lt', 'rg'])
+`countPositions(roster, ['c', 'lt', 'rg'])`
 Then the return value should be
 
+```
 {
   c: 6,
   lt: 7,
   rg: 4,
 }
-The values on the right are the counts of players at that position, just like the countPlayersAtPosition function. You are encouraged to use that function as a helper function if it helps you.
+```
+
+The values on the right are the counts of players at that position, just like the `countPlayersAtPosition` function. You are encouraged to use that function as a helper function if it helps you.
