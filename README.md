@@ -71,17 +71,17 @@ Write a function `topScoringPlayer` that accepts one argument, the roster of pla
     - If the array is empty, it should return `null`
     - If two players have the same score, it should return the one that appears first in the list
 
-```
+````
 function topScoringPlayer(roster) {
-let topScore = roster.slice(0)
-topScore.sort(function(a,b) {
-  return b.pointsScored - a.pointsScored
-})
-  console.log(topScore[0])
+if(roster.length < 1) {
+  return null
+}  
+ return roster.sort((a, b) => (a.pointsScored < b.pointsScored) ? 1 : (a.pointsScored === b.pointsScored) ? (( a > b) ? -1 : 1) : -1)[0]
 }
 
 topScoringPlayer(roster)
-```
+````
+HINT https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 #
 ### List players names and numbers for their jerseys
 Write a function `namesAndNumbers` that accepts one argument, the roster of players as an array.
