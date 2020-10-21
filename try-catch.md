@@ -27,21 +27,31 @@ function getCarColor(car) {
   }
 }
 ````
-
-
-Throwing an error
-Write a function checkBankAccount that takes in a number. If the number is less than or equal to 0, use throw to raise an error. You should throw the string "Out of money".
+#
+### Throwing an error
+Write a function `checkBankAccount` that takes in a number. If the number is less than or equal to 0, use `throw` to raise an error. You should throw the string `"Out of money"`.
 
 If the number is greater than 0, the function shouldn't do anything.
 
 Example:
-
+``
 checkBankAccount(100) //=> undefined
 checkBankAccount(-50) // Thrown: 'Out of money'
-Custom Error Messages
+``
+````
+function checkBankAccount(num) {
+  if (num <= 0) {
+    throw new Error("Out of money");
+  }
+}
+````
+
+#
+### Custom Error Messages
 You can give your errors more context by passing them a message. It will look like: throw new Error("An error! Oh no!")
 
-Write a function called customErrorMessage that takes a string and throws an error with that string as its message.
+#
+### Write a function called customErrorMessage that takes a string and throws an error with that string as its message.
 
 Example:
 
@@ -50,7 +60,8 @@ customErrorMessage("Argument must be a car object with a color property") // Err
 Error types
 There are different categories of errors. For example, if you encounter an error because of an incorrect data type, you can use a TypeError. Instead of throwing a new Error, it will look like: throw new TypeError("Wrong data type!")
 
-Write a function addOneHundred that takes in one argument. If the argument is a number, return the number plus 100.
+#
+### Write a function addOneHundred that takes in one argument. If the argument is a number, return the number plus 100.
 
 If the argument is not a number, use throw to raise a TypeError with the message "Argument must be a number".
 
@@ -61,7 +72,9 @@ addOneHundred("A Mighty Wind") // TypeError: Argument must be a number
 Reminder: you can check if something is a number using typeof.
 
 Catching and throwing again
-Write a function called getAuthorName that takes in an author object. It should return the author's name, if accessing the author.name works. If it doesn't, catch the error, and throw a new TypeError("Author name failed").
+
+#
+### Write a function called getAuthorName that takes in an author object. It should return the author's name, if accessing the author.name works. If it doesn't, catch the error, and throw a new TypeError("Author name failed").
 
 The function must use the try/catch syntax
 The function should attempt to return the author name as follows: return author.name
