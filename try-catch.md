@@ -16,7 +16,7 @@ let car = { make: "Honda", model: "Civic", color: "Slate Grey"}
 getCarColor(car) // "Slate Grey"
 getCarColor(undefined) // "Color unknown"
 ```
-
+#### Solution 
 ````
 function getCarColor(car) {
   try {
@@ -38,6 +38,7 @@ Example:
 checkBankAccount(100) //=> undefined
 checkBankAccount(-50) // Thrown: 'Out of money'
 ```
+#### Solution 
 ````
 function checkBankAccount(num) {
   if (num <= 0) {
