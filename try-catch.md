@@ -11,11 +11,13 @@ Write a function called `getCarColor` that takes in a car object like in the exa
 - For a valid car, it should return the car's color
 - If accessing the color fails, the function should catch the error and return "Color unknown"
 
-`let car = { make: "Honda", model: "Civic", color: "Slate Grey"}`
+```
+let car = { make: "Honda", model: "Civic", color: "Slate Grey"}
 
-`getCarColor(car)` // "Slate Grey"
+`getCarColor(car) // "Slate Grey"
 
-`getCarColor(undefined)` // "Color unknown"
+`getCarColor(undefined) // "Color unknown"
+```
 
 ````
 function getCarColor(car) {
