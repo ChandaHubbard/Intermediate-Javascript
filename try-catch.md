@@ -66,7 +66,7 @@ function customErrorMessage(str) {
 ````
 
 ## Error types
-There are different categories of errors. For example, if you encounter an error because of an incorrect data type, you can use a `TypeErro`r. Instead of throwing a `new Error`, it will look like: `throw new TypeError("Wrong data type!")`
+There are different categories of errors. For example, if you encounter an error because of an incorrect data type, you can use a `TypeError`. Instead of throwing a `new Error`, it will look like: `throw new TypeError("Wrong data type!")`
 
 Write a function `addOneHundred` that takes in one argument. If the argument is a number, return the number plus 100.
 
