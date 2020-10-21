@@ -13,10 +13,8 @@ Write a function called `getCarColor` that takes in a car object like in the exa
 
 ```
 let car = { make: "Honda", model: "Civic", color: "Slate Grey"}
-
-`getCarColor(car) // "Slate Grey"
-
-`getCarColor(undefined) // "Color unknown"
+getCarColor(car) // "Slate Grey"
+getCarColor(undefined) // "Color unknown"
 ```
 
 ````
