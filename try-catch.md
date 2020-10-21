@@ -34,10 +34,10 @@ Write a function `checkBankAccount` that takes in a number. If the number is les
 If the number is greater than 0, the function shouldn't do anything.
 
 Example:
-``
+```
 checkBankAccount(100) //=> undefined
 checkBankAccount(-50) // Thrown: 'Out of money'
-``
+```
 ````
 function checkBankAccount(num) {
   if (num <= 0) {
