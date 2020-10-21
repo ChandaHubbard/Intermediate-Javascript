@@ -1,16 +1,31 @@
-# Try / Catch
+## Try / Catch
 
-The following challenges wil help you get more comfortable with throwing exceptions and handling them using try and catch.
+https://www.qualified.io/assess/5e8cb4770b3d890013d6f00b/challenges/5e909d498abcc00014f565a3?invite=dBuaNoFx7FEpGg
 
-## Use try and catch to handle errors
-Write a function called getCarColor that takes in a car object like in the example below. It should return car's color. Use try and catch so that if accessing the color raises an error, the function returns "Color unknown".
+The following challenges wil help you get more comfortable with throwing exceptions and handling them using `try` and `catch`.
 
-The function must use the try/catch syntax
-For a valid car, it should return the car's color
-If accessing the color fails, the function should catch the error and return "Color unknown"
-let car = { make: "Honda", model: "Civic", color: "Slate Grey"}
-getCarColor(car) // "Slate Grey"
-getCarColor(undefined) // "Color unknown"
+### Use try and catch to handle errors
+Write a function called `getCarColor` that takes in a car object like in the example below. It should return car's color. Use `try` and `catch` so that if accessing the color raises an error, the function returns `"Color unknown"`.
+
+- The function must use the try/catch syntax
+- For a valid car, it should return the car's color
+- If accessing the color fails, the function should catch the error and return "Color unknown"
+`let car = { make: "Honda", model: "Civic", color: "Slate Grey"}`
+`getCarColor(car)` // "Slate Grey"
+`getCarColor(undefined)` // "Color unknown"
+
+````
+function getCarColor(car) {
+  try {
+    return car.color;
+  } catch (e) {
+    throw new Error("Color unknown");
+    console.log(e);
+  }
+}
+````
+
+
 Throwing an error
 Write a function checkBankAccount that takes in a number. If the number is less than or equal to 0, use throw to raise an error. You should throw the string "Out of money".
 
