@@ -1,26 +1,37 @@
 # Practice JS Array Methods 
 
-##Let's practice using forEach
+## Let's practice using `forEach`
 
-forEach
-console.log the strings
-Write a function printNames that uses forEach to log each name to the console.
+### `forEach`
+### `console.log` the strings
+Write a function `printNames` that uses `forEach` to log each name to the console.
 
 Argument: an array of strings like
-
+```
 [
   "Mark Fisher",
   "Ira Bennett",
   "Denise Hicks",
   "Julius Patterson"
 ]
+```
 Return value: none
 
-console.log object properties
-Write a function logTreeTypethat uses forEach to log the type of each tree object to the console.
+#### Solution 
+
+````
+function printNames(names) {
+  names.forEach(function (name) {
+    console.log(name)
+  })
+}
+````
+
+### `console.log` object properties
+Write a function `logTreeTypethat` uses `forEach` to log the type of each tree object to the console.
 
 Arguments: an array of objects like
-
+```
 [
   {
   type: "oak",
@@ -31,8 +42,20 @@ Arguments: an array of objects like
    height: "21m"
   }
 ]
+```
 Return value: none
-Log the type property of each tree object to the console.
+
+Log the `type` property of each tree object to the console.
+
+#### Solution 
+````
+function logTreeType(trees) {
+  trees.forEach(function (tree) {
+    console.log(`${tree.type}`)
+  })
+}
+````
+
 
 sum the numbers
 Write a function totalPoints that uses forEach to add up an array of numbers.
@@ -88,17 +111,9 @@ You may find it helpful to use template strings, but you don't have to.
 
 
 
-function printNames(names) {
-  names.forEach(function (name) {
-    console.log(name)
-  })
-}
 
-function logTreeType(trees) {
-  trees.forEach(function (tree) {
-    console.log(`${tree.type}`)
-  })
-}
+
+
 
 function totalPoints(scores) {
   let sum = 0
