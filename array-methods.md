@@ -214,4 +214,21 @@
   return admin
 }
   ````
+#### Find the first number divisible by 10
+- Write a function `divisibleByTen` that takes in an array of numbers, and uses `find` to return the first number that is a multiple of 10.
+
+  Arguments: an array of numbers like:
+
+  ```[4,41,832,72,89,120,431,505,70]```
+  Return value: the first number that's divisible by 10. If there are no numbers divisible by 10, return `undefined`.
+
+  For the sample array above, the function should return `120`.
   
+   ### Solution 
+  ````
+  function divisibleByTen(nums) {
+  let multiple = nums.find(function(divide) {
+    return divide % 10 === 0
+  })
+  return multiple
+} ````
