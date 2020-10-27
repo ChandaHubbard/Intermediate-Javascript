@@ -410,11 +410,13 @@
 
   Example:
 
-  ```
+  `
   let strings = ["Four score and seven years ago", "our forefathers brought forth on this continent a new nation", "concieved in liberty", "and dedicated to the proposition that all men are created equal", "Now we are engaged in a great civil war", "testing whether that nation", "or any so conceived and so dedicated", "can long endure."]
-  ```
+  `
   `shorterThanX(strings, 20)` // ["can long endure."]
+  
   `shorterThanX(strings, 30)` // [ 'concieved in liberty',  'testing whether that nation',  'can long endure.' ]
+  
   If there's no strings in the array that are shorter than the number, return an empty array.
   
   ### Solution 
