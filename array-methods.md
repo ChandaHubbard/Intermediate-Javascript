@@ -431,10 +431,22 @@
 ````
 
 #### Only the strings from an array of different types
-  - Write a function onlyStrings that takes an array that has different kinds of elements and uses filter to return an array of only the strings.
+  - Write a function `onlyStrings` that takes an array that has different kinds of elements and uses `filter` to return an array of only the strings.
 
   Arguments: an array of different types of elements.
   Return value: an array with only the strings from the input array.
 
-  let manyTypes = [4, "4", "four score", 80, {age: 80}, ["nations"], {type: "free"}, "states"]
-  onlyStrings(manyTypes) //=> ["4","four score", "states"]
+  `let manyTypes = [4, "4", "four score", 80, {age: 80}, ["nations"], {type: "free"}, "states"]`
+  
+  `onlyStrings(manyTypes)` //=> `["4","four score", "states"]`
+  
+  ### Solution 
+
+    ````
+    function onlyStrings(strings) {
+  let stringsOnly = strings.filter(function(arr) {
+    return typeof(arr) === 'string'
+  })
+  return stringsOnly
+}
+  ````
