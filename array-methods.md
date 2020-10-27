@@ -442,12 +442,11 @@
   `onlyStrings(manyTypes)` //=> `["4","four score", "states"]`
   
   ### Solution 
-
-    ````
-    function onlyStrings(strings) {
-      let stringsOnly = strings.filter(function(arr) {
-        return typeof(arr) === 'string'
-        })
-       return stringsOnly
-       }
-       ````
+````
+function onlyStrings(strings) {
+  let stringsOnly = strings.filter(function(arr) {
+    return typeof(arr) === 'string'
+    })
+   return stringsOnly
+  }
+  ````
