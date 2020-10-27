@@ -303,7 +303,7 @@
 
   ```[4,41,832,72,89,120,431,505,70]
   ```
-  Return value: an array of even numbers. If there are no even numbers, return an empty array. For the array above, the function should return [`4,832,72,120,70]`
+  Return value: an array of even numbers. If there are no even numbers, return an empty array. For the array above, the function should return `[4,832,72,120,70]`
 
   Remember - you can find out if a number is even using the `%` operator.
   
@@ -321,17 +321,31 @@
   ````
 
 #### Numbers greater than 100
-  - Write a function greaterThan100 that takes in an array of numbers, and uses filter to return an the ones that are greater than 100.
+
+  - Write a function `greaterThan100` that takes in an array of numbers, and uses `filter` to return an the ones that are greater than 100.
 
   Arguments: an array of numbers like:
 
+  ```
   [4,41,832,72,89,120,431,505,70]
+  ```
   Return value: an array of numbers greater than 100. If there are no numbers greater than 100, return an empty array.
 
-  For the sample array above, the function should return [832,120,431,505].
+  For the sample array above, the function should return `[832,120,431,505]`.
+  
+  ### Solution 
+  
+  ````
+  function greaterThan100(nums) {
+  let hundos = nums.filter(function(numbers) {
+    return numbers > 100
+  })
+  return hundos
+}
+  ````
 
-  Users that are not administrators
-  Write a function nonAdminUsers that uses filter to return the users who are not admins.
+#### Users that are not administrators
+  - Write a function `nonAdminUsers` that uses `filter` to return the users who are not admins.
 
   Arguments: an array of user objects, like
   ```
@@ -358,30 +372,64 @@
     },
   ]
   ```
-  Return an array of user objects that have false value for the isAdmin property.
+  Return an array of user objects that have `false` value for the `isAdmin` property.
 
-  For this sample input, it should return an array of 4 users - all except the one with isAdmin: true.
+  For this sample input, it should return an array of 4 users - all except the one with `isAdmin: true`.
+   ### Solution 
+  
+  ````
+  function nonAdminUsers(people) {
+  let nonAdmin = people.filter(function(admin) {
+    return admin.isAdmin === false
+  })
+  return nonAdmin
+}
+  ````
 
-  Count of the users that are admins
-  Write a function countAdminUsers that returns the number of users that have isAdmin: true. It should use filter and then .length on the result from filter.
+#### Count of the users that are admins
+  - Write a function `countAdminUsers` that returns the number of users that have `isAdmin: true`. It should use `filter` and then `.length` on the result from `filter`.
 
-  For this sample input, it should return 1, because there is only one admin user.
+  For this sample input, it should return `1`, because there is only one admin user.
+  
+  ### Solution 
+  
+  ````
+  function countAdminUsers(people) {
+  let areAdmin = people.filter(function(admin) {
+    return admin.isAdmin === true
+  })
+  return areAdmin.length
+}
+  ````
 
-  Strings shorter than a specified length
-  Write a function shorterThanX that takes an array of strings and a maxLength number and uses filter to return all the strings shorter than the maxLength.
+#### Strings shorter than a specified length
+  - Write a function `shorterThanX` that takes an array of strings and a `maxLength` number and uses `filter` to return all the strings shorter than the `maxLength`.
 
   Arguments: an array of strings, and a number.
-  Return value: an array of strings that have .length less than the number.
+  Return value: an array of strings that have `.length` less than the number.
 
   Example:
 
+  ```
   let strings = ["Four score and seven years ago", "our forefathers brought forth on this continent a new nation", "concieved in liberty", "and dedicated to the proposition that all men are created equal", "Now we are engaged in a great civil war", "testing whether that nation", "or any so conceived and so dedicated", "can long endure."]
-  shorterThanX(strings, 20) // ["can long endure."]
-  shorterThanX(strings, 30) // [ 'concieved in liberty',  'testing whether that nation',  'can long endure.' ]
+  ```
+  `shorterThanX(strings, 20)` // ["can long endure."]
+  `shorterThanX(strings, 30)` // [ 'concieved in liberty',  'testing whether that nation',  'can long endure.' ]
   If there's no strings in the array that are shorter than the number, return an empty array.
+  
+  ### Solution 
+  
+  ````
+  function shorterThanX(strings, max) {
+  let shortStrings = strings.filter(function(word) {
+    return word.length < max
+  })
+  return shortStrings
+}
+````
 
-  Only the strings from an array of different types
-  Write a function onlyStrings that takes an array that has different kinds of elements and uses filter to return an array of only the strings.
+#### Only the strings from an array of different types
+  - Write a function onlyStrings that takes an array that has different kinds of elements and uses filter to return an array of only the strings.
 
   Arguments: an array of different types of elements.
   Return value: an array with only the strings from the input array.
