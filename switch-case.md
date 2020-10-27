@@ -2,7 +2,7 @@
 
 https://www.qualified.io/assess/5e8e2b1aa78b15001b426e15
 
-````
+
 ## Switch/Case: Rock Facts
 Let's practice working with `switch` and `case`. Remember: this syntax is another way to handle control flow.
 
