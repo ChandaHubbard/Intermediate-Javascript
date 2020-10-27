@@ -2,8 +2,8 @@
 
 ## Let's practice using `forEach`
 
-## `forEach`
-## `console.log` the strings
+#### `forEach`
+#### `console.log` the strings
 Write a function `printNames` that uses `forEach` to log each name to the console.
 
 Argument: an array of strings like
