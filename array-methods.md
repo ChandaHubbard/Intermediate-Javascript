@@ -214,6 +214,7 @@
   return admin
 }
   ````
+  
 #### Find the first number divisible by 10
 - Write a function `divisibleByTen` that takes in an array of numbers, and uses `find` to return the first number that is a multiple of 10.
 
