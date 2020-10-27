@@ -50,6 +50,7 @@ Write a function called `parseNumber` that gets one of these as an argument, and
 
 ### Hints
 You can use `typeof` to get the type of a value
+
 You can use `parseInt` to convert from a string to a number
 
 ### Solution: 
