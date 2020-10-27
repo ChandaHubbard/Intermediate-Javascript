@@ -243,8 +243,11 @@
   Arguments: an array of numbers, and another number, the divisor.
 
   `let numbers = [4,41,832,72,89,120,431,70]`
+  
   `divisibleByX(numbers, 10)` // 120
+  
   `divisibleByX(numbers, 3)` // 72
+  
   `divisibleByX(numbers, 2)` // 4
 
   Return value: the first value in the array that's divisible by the number that's the second argument. If there are no values that are divisible by the second argument, return undefined.
@@ -278,7 +281,7 @@
 `startsWithTheLetter(strings, "i")` // undefined
   As a bonus: throw an error `"Letter must be a string of length 1"` if the second argument is not a string, or if its `.length` is more than 1.
 
-`startsWithTheLetter(strings, "dog")` // Error: Letter must be a string of length 1
+  `startsWithTheLetter(strings, "dog")` // Error: Letter must be a string of length 1
 
   ### Solution 
   
