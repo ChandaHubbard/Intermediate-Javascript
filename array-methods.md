@@ -167,3 +167,51 @@
   return odd
   }
   ````
+#### Find an object based on a property
+- Write a function `getAdministrator` that uses `find` to return the first object that has `isAdmin: true` from a list of user objects.
+
+  Arguments: an array of user objects, like
+
+  ```
+  [
+    {
+      "username": "carlie.beauchamp",
+      "isAdmin": false
+    },
+    {
+      "username": "wonda.garmon",
+      "isAdmin": false
+    },
+    {
+      "username": "myong.huntington",
+      "isAdmin": false
+    },
+    {
+      "username": "davis.brennan",
+      "isAdmin": true
+    },
+    {
+      "username": "porsha.stump",
+      "isAdmin": false
+    },
+  ]
+  ```
+  Return the first user object that has a `true` value for the `isAdmin` property.
+
+  In this case, the function should return the object
+```
+  {
+    "username": "davis.brennan",
+    "isAdmin": true
+  }
+  ```
+  ### Solution 
+  ````
+  function getAdministrator(admins) {
+  let admin = admins.find(function(name) {
+    return name.isAdmin === true
+  })
+  return admin
+}
+  ````
+  
