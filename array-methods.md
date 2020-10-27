@@ -294,15 +294,14 @@
   }
   ````
   
-## Let's practice using filter
+## Let's practice using `filter`
 
 #### Even Numbers
 - Write a function evenNumbers that uses filter to return only the even numbers from an array of numbers.
 
   Arguments: an array of numbers like
 
-  ```
-  [4,41,832,72,89,120,431,505,70]
+  ```[4,41,832,72,89,120,431,505,70]
   ```
   Return value: an array of even numbers. If there are no even numbers, return an empty array. For the array above, the function should return [`4,832,72,120,70]`
 
