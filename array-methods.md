@@ -219,7 +219,9 @@
 
   Arguments: an array of numbers like:
 
-  ```[4,41,832,72,89,120,431,505,70]```
+  ```
+  [4,41,832,72,89,120,431,505,70]
+  ```
   
   Return value: the first number that's divisible by 10. If there are no numbers divisible by 10, return `undefined`.
 
@@ -232,4 +234,5 @@
     return divide % 10 === 0
   })
   return multiple
-  } ````
+  } 
+  ````
