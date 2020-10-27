@@ -237,3 +237,53 @@
   return multiple
   } 
   ````
+#### Find the first number divisible by a number provided as an argument
+- Write a function `divisibleByX` that uses `find` to return the first number in the array that's divisible by another number, passed in as an argument.
+
+  Arguments: an array of numbers, and another number, the divisor.
+
+  `let numbers = [4,41,832,72,89,120,431,70]`
+  `divisibleByX(numbers, 10) // 120`
+  `divisibleByX(numbers, 3) // 72`
+  `divisibleByX(numbers, 2) // 4`
+
+  Return value: the first value in the array that's divisible by the number that's the second argument. If there are no values that are divisible by the second argument, return undefined.
+  
+  ### Solution 
+  
+  ````
+  function divisibleByX(nums, divisor) {
+  let divide = nums.find(function(x) {
+    return x % divisor === 0
+  })
+  return divide
+  }
+  ````
+
+#### Find the first string that starts with a letter provided as an argument
+- Write a function `startsWithLetter` that uses `find` to return the first string that starts with a particular letter.
+
+  Arguments: an array of strings, and a letter.
+  Return value: the first string that has that letter as the first character of the string.
+
+  Example:
+
+  `let strings = ["Do you want to hear a joke?", "It's about a three-legged dog", "The dog walks into a bar", "The dog says, ", "\"I'm looking for the man who shot my paw\"", "Get it?"]`
+  `startsWithTheLetter(strings, "T") // "The dog walks into a bar"`
+  `startsWithTheLetter(strings, "I") // "It's about a three-legged dog"`
+  If there's no string in the array that starts with that letter, return `undefined`. The function should leave lowercase and uppercase letters alone, so:
+`startsWithTheLetter(strings, "i") // undefined`
+  As a bonus: throw an error `"Letter must be a string of length 1"` if the second argument is not a string, or if its `.length` is more than 1.
+
+`startsWithTheLetter(strings, "dog") // Error: Letter must be a string of length 1`
+
+  ### Solution 
+  
+  ````
+  function startsWithLetter(words, letter) {
+  let firststring = words.find(function(word) {
+    return word.charAt(0) === letter
+  })
+  return firststring
+}
+  ````
