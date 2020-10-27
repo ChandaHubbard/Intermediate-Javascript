@@ -142,3 +142,28 @@
     }) 
   }
   ````
+  
+## Let's practice using `find`
+
+#### Find the first odd number
+- Write a function firstOdd that uses find to find the first odd number in an array.
+
+  Arguments: an array of numbers like
+
+  ```[4,41,832,72,89,120,431,505,70]```
+  
+  Return value: the first odd number, if there is one. If there are no odd numbers, return undefined. For the array above, the function should return `41`
+
+  Remember - you can find out if a number is odd using the `%` operator.
+
+  `number % 2 === 1` // true, for odd numbers
+  
+  ### Solution 
+  ````
+  function firstOdd(nums) {
+  let odd = nums.find(function (odds) {
+    return odds % 2 === 1
+  })
+  return odd
+}
+  ````
