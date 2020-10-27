@@ -8,10 +8,10 @@ Let's practice working with `switch` and `case`. Remember: this syntax is anothe
 
 Write a function called `rockFacts` that takes in a kind of rock, as a string. It should use `switch` and `case` to return the correct fact, depending on which kind of rock is passed in.
 
-If the argument is `'metamorphic'` it returns the string: `"Created by extreme heat and pressure"`
-If the argument is `'igneous'`, it returns the string: `"Formed through the cooling and solidification of magma or lava"`
-If given the argument `'sedimentary' it returns the string: "Formed by the accumulation or deposition of small particles"`
-Otherwise, it should return `"Please provide an appropriate rock type."`
+- If the argument is `'metamorphic'` it returns the string: `"Created by extreme heat and pressure"`
+- If the argument is `'igneous'`, it returns the string: `"Formed through the cooling and solidification of magma or lava"`
+- If given the argument `'sedimentary' it returns the string: "Formed by the accumulation or deposition of small particles"`
+- Otherwise, it should return `"Please provide an appropriate rock type."`
 
 ### Solution: 
 ````
