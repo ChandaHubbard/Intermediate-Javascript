@@ -4,7 +4,7 @@
 
 #### `forEach`
 #### `console.log` the strings
-Write a function `printNames` that uses `forEach` to log each name to the console.
+- Write a function `printNames` that uses `forEach` to log each name to the console.
 
 Argument: an array of strings like
 ```
@@ -28,7 +28,7 @@ function printNames(names) {
 ````
 
 #### `console.log` object properties
-Write a function `logTreeTypethat` uses `forEach` to log the type of each tree object to the console.
+- Write a function `logTreeTypethat` uses `forEach` to log the type of each tree object to the console.
 
 Arguments: an array of objects like
 ```
@@ -57,7 +57,7 @@ function logTreeType(trees) {
 ````
 
 #### sum the numbers
-Write a function `totalPoints` that uses `forEach `to add up an array of numbers.
+- Write a function `totalPoints` that uses `forEach `to add up an array of numbers.
 
 Arguments: an array of numbers, like
 ```
@@ -77,7 +77,7 @@ function totalPoints(scores) {
 ````
 
 #### add the strings together
-Write a function `buildSentence` that takes in an array of words and uses `forEach` to add the strings together. It should also add a space, `" "`, after each word .
+- Write a function `buildSentence` that takes in an array of words and uses `forEach` to add the strings together. It should also add a space, `" "`, after each word .
 
 Arguments: an array of strings, like:
 ```
@@ -100,46 +100,46 @@ function buildSentence(words) {
 ````
 
 #### `console.log` with template strings
-Write a function `logPercentages` that takes an array of decimal numbers and uses `forEach` to log each one with some formatting as shown below.
+- Write a function `logPercentages` that takes an array of decimal numbers and uses `forEach` to log each one with some formatting as shown below.
 
-The numbers should be formatted as percentages. That means:
+  The numbers should be formatted as percentages. That means:
 
-multiply by 100
-include the percent symbol`%` at the end of the string
-Arguments: an array of numbers like
+  multiply by 100
+  include the percent symbol`%` at the end of the string
+  Arguments: an array of numbers like
 
-```
-[
-  0.75,
-  0.91,
-  0.48,
-  0.23,
-  0.99,
-  0.83,
-  1.10,
-]
-```
-Return value: none
+  ```
+  [
+    0.75,
+    0.91,
+    0.48,
+    0.23,
+    0.99,
+    0.83,
+    1.10,
+  ]
+  ```
+  Return value: none
 
-Use `forEach` and log each value using `console.log`.
+  Use `forEach` and log each value using `console.log`.
 
-The logged values should look like:
-```
-75%
-91%
-48%
-23%
-99%
-83%
-110%
-```
-You may find it helpful to use template strings, but you don't have to.
+  The logged values should look like:
+  ```
+  75%
+  91%
+  48%
+  23%
+  99%
+  83%
+  110%
+  ```
+  You may find it helpful to use template strings, but you don't have to.
 
-### Solution 
-````
-function logPercentages(nums) {
-  nums.forEach(function(decimal) {
-    console.log(`${decimal*100}%`)
-  }) 
-}
-````
+  ### Solution 
+  ````
+  function logPercentages(nums) {
+    nums.forEach(function(decimal) {
+      console.log(`${decimal*100}%`)
+    }) 
+  }
+  ````
