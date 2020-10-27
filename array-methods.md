@@ -269,8 +269,11 @@
   Example:
 
   `let strings = ["Do you want to hear a joke?", "It's about a three-legged dog", "The dog walks into a bar", "The dog says, ", "\"I'm looking for the man who shot my paw\"", "Get it?"]`
+  
   `startsWithTheLetter(strings, "T") // "The dog walks into a bar"`
+  
   `startsWithTheLetter(strings, "I") // "It's about a three-legged dog"`
+  
   If there's no string in the array that starts with that letter, return `undefined`. The function should leave lowercase and uppercase letters alone, so:
 `startsWithTheLetter(strings, "i") // undefined`
   As a bonus: throw an error `"Letter must be a string of length 1"` if the second argument is not a string, or if its `.length` is more than 1.
