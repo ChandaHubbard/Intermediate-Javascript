@@ -2,102 +2,101 @@
 
 ## Let's practice using `forEach`
 
-#### `forEach`
 #### `console.log` the strings
 - Write a function `printNames` that uses `forEach` to log each name to the console.
 
-Argument: an array of strings like
-```
-[
-  "Mark Fisher",
-  "Ira Bennett",
-  "Denise Hicks",
-  "Julius Patterson"
-]
-```
-Return value: none
+  Argument: an array of strings like
+  ```
+  [
+    "Mark Fisher",
+    "Ira Bennett",
+    "Denise Hicks",
+    "Julius Patterson"
+  ]
+  ```
+  Return value: none
 
-### Solution 
+  ### Solution 
 
-````
-function printNames(names) {
-  names.forEach(function (name) {
-    console.log(name)
-  })
-}
-````
+  ````
+  function printNames(names) {
+    names.forEach(function (name) {
+      console.log(name)
+    })
+  }
+  ````
 
 #### `console.log` object properties
 - Write a function `logTreeTypethat` uses `forEach` to log the type of each tree object to the console.
 
-Arguments: an array of objects like
-```
-[
-  {
-  type: "oak",
-  height: "30m"
-  },
-  {
-   type: "elm",
-   height: "21m"
+  Arguments: an array of objects like
+  ```
+  [
+    {
+    type: "oak",
+    height: "30m"
+    },
+    {
+     type: "elm",
+     height: "21m"
+    }
+  ]
+  ```
+  Return value: none
+
+  Log the `type` property of each tree object to the console.
+
+  ### Solution 
+  ````
+  function logTreeType(trees) {
+    trees.forEach(function (tree) {
+      console.log(`${tree.type}`)
+    })
   }
-]
-```
-Return value: none
-
-Log the `type` property of each tree object to the console.
-
-### Solution 
-````
-function logTreeType(trees) {
-  trees.forEach(function (tree) {
-    console.log(`${tree.type}`)
-  })
-}
-````
+  ````
 
 #### sum the numbers
 - Write a function `totalPoints` that uses `forEach `to add up an array of numbers.
 
-Arguments: an array of numbers, like
-```
-[6,7,1,3,1,17,4,12,1,5,0,13,15]
-```
-Return value: the sum of the numbers in the array
+  Arguments: an array of numbers, like
+  ```
+  [6,7,1,3,1,17,4,12,1,5,0,13,15]
+  ```
+  Return value: the sum of the numbers in the array
 
-### Solution 
-````
-function totalPoints(scores) {
-  let sum = 0
-  scores.forEach(function (points) {
-    sum += points  
-  })
-  return sum
-}
-````
+  ### Solution 
+  ````
+  function totalPoints(scores) {
+    let sum = 0
+    scores.forEach(function (points) {
+      sum += points  
+    })
+    return sum
+  }
+  ````
 
 #### add the strings together
 - Write a function `buildSentence` that takes in an array of words and uses `forEach` to add the strings together. It should also add a space, `" "`, after each word .
 
-Arguments: an array of strings, like:
-```
-["I'm", "looking", "for", "the", "man", "who", "shot", "my", "paw"]
-```
-Return value: The full sentence, like
-```
-"I'm looking for the man who shot my paw "
-```
-Note the spaces.
-### Solution 
-````
-function buildSentence(words) {
-  let sentence = ""
-  words.forEach(function(word) {
-    sentence += word + " "
-  })
-  return sentence
-}
-````
+  Arguments: an array of strings, like:
+  ```
+  ["I'm", "looking", "for", "the", "man", "who", "shot", "my", "paw"]
+  ```
+  Return value: The full sentence, like
+  ```
+  "I'm looking for the man who shot my paw "
+  ```
+  Note the spaces.
+  ### Solution 
+  ````
+  function buildSentence(words) {
+    let sentence = ""
+    words.forEach(function(word) {
+      sentence += word + " "
+    })
+    return sentence
+  }
+  ````
 
 #### `console.log` with template strings
 - Write a function `logPercentages` that takes an array of decimal numbers and uses `forEach` to log each one with some formatting as shown below.
