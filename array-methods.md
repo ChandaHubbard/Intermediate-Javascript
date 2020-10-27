@@ -232,5 +232,4 @@
     return divide % 10 === 0
   })
   return multiple
-  } 
-````
+  } ````
