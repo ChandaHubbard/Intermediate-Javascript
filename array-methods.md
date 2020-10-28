@@ -450,3 +450,113 @@ function onlyStrings(strings) {
    return stringsOnly
   }
   ````
+  
+## Let's practice using `map`
+
+Add 3 to all the numbers
+Write a function addThreeToAll that uses map to add 3 to each number in an array of numbers.
+
+Arguments: an array of numbers like
+
+[4,41,832,72,89,120,431,505,70]
+Return value: an array of numbers, each 3 more than the input array. For the array above, the function should return [7,44,835,75,92,123,434,508,73]
+
+function addThreeToAll(preThree) {
+  let plusThree = preThree.map(number => number +3 )
+  return plusThree
+}
+
+Square all the numbers
+Write a function squareAll that takes in an array of numbers, and uses map to return an array of each of the numbers, squared.
+
+Arguments: an array of numbers like:
+
+[4,41,832,72,89,120,431,505,70]
+Return value: an array of numbers, each the square of the input array.
+
+For the sample array above, the function should return [16, 1681, 692224, 5184, 7921, 14400, 185761, 255025, 4900].
+
+Remember, you can square a number by multiplying it by itself, or by using the exponent operator:
+
+let number = 4
+number * number // 16
+number ** 2 // 16
+Note that the caret operator ^ does not mean exponent in JavaScript.
+
+function squareAll(preSquare) {
+  let squares = preSquare.map(number => number * number )
+  return squares
+}
+
+Add the greeting to each of the names
+Write a function allGreetings that takes an array of names (strings) and returns an array of greetings (strings).
+
+The greetings should each be "Hello, [name], nice to meet ya!"
+
+Arguments: an array of strings, each a name of someone to greet
+Return value: an array of strings, with the greeting added to the name.
+
+let names = ['Terri Melia', 'Manpreet Wong', 'Madelyn Francis', 'Theia Kane', 'Arwel Barrera', 'Humza Medina', 'Jean-Luc Robles', 'Gianni Head', 'Rowan Skinner', 'Jago Blevins']
+allGreetings(names) // => ['Hello, Terri Melia, nice to meet ya!', 'Hello, Manpreet Wong, nice to meet ya!', 'Hello, Madelyn Francis, nice to meet ya!', 'Hello, Theia Kane, nice to meet ya!', 'Hello, Arwel Barrera, nice to meet ya!', 'Hello, Humza Medina, nice to meet ya!', 'Hello, Jean-Luc Robles, nice to meet ya!', 'Hello, Gianni Head, nice to meet ya!', 'Hello, Rowan Skinner, nice to meet ya!', 'Hello, Jago Blevins, nice to meet ya!']
+You might find it helpful to use template strings.
+
+function allGreetings(names) {
+  let greetings = names.map(greet => `Hello, ${greet}, nice to meet ya!`)
+  return greetings
+}
+
+
+Get the username from each of the users
+Write a function getUsernames that takes in an array of user objects and uses map to return an array of just the usernames.
+
+Arguments: an array of user objects like
+
+let users = [
+  {
+    "username": "carlie.beauchamp",
+    "isAdmin": false
+  },
+  {
+    "username": "wonda.garmon",
+    "isAdmin": false
+  },
+  {
+    "username": "myong.huntington",
+    "isAdmin": false
+  },
+  {
+    "username": "davis.brennan",
+    "isAdmin": true
+  },
+  {
+    "username": "porsha.stump",
+    "isAdmin": false
+  },
+]
+Return value: an array of strings with just the usernames, like
+
+getUsernames(users) // => ['carlie.beauchamp', 'wonda.garmon', 'myong.huntington', 'davis.brennan', 'porsha.stump']
+
+function getUsernames(users) {
+  let usernames = users.map(name => name.username)
+  return usernames
+}
+Write a 'pluck' function
+Write a function pluck that takes in an array of objects and a string representing a key, and uses map to return an array of the values at that key for each of the objects.
+
+Arguments: an array of objects, and a string key
+Return value: an array of the values at that key
+
+For example, if we used the users array from the last exercise, we could do:
+
+pluck(users, 'username') // => ['carlie.beauchamp', 'wonda.garmon', 'myong.huntington', 'davis.brennan', 'porsha.stump']
+pluck(users, 'isAdmin') // => [false, false, false, true, false]
+If any of the objects does not have a value at that key, the array should have undefined in that slot.
+
+let birds = [{species: "warbler", weight: "0.45oz"}, {species: "jay"}, {species: "raven", weight: "1.6lbs"}]
+pluck(birds, 'weight') // ["0.45oz", undefined, "1.6lbs"]
+Hint: Using the square bracket notation, you can access a property of an object using a variable.
+
+let bird = {species: "warbler", weight: "0.45oz"}
+let key = 'species'
+bird[key] //=> "warbler"
