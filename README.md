@@ -137,6 +137,15 @@ function countPlayersAtPosition(roster, position) {
   return count
 }
 ````
+#### Optimal Solution using `.map()`
+````
+function namesAndNumbers(roster) {
+  let jerseys = roster.map(players => `${players.name}\n${players.number}`)
+  return jerseys
+  }
+  ````
+  
+ 
   #### Part 2: Given the roster and a list of positions, return an object with the count for each position
 Write a function `countPositions` that accepts two arguments, the roster as an array, and an array of strings representing positions.
 
