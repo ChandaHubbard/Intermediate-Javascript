@@ -70,6 +70,8 @@ Write a function `topScoringPlayer` that accepts one argument, the roster of pla
     - It should return the whole player object (not the name or any other value from the player object)
     - If the array is empty, it should return `null`
     - If two players have the same score, it should return the one that appears first in the list
+    
+ #### Solution 
 
 ````
 function topScoringPlayer(roster) {
@@ -101,6 +103,17 @@ Write a function `namesAndNumbers` that accepts one argument, the roster of play
   "Carlson Morin\n12"
 ]
 ```
+
+ #### Solution 
+ ````
+ function namesAndNumbers(roster) {
+  let jerseys = []
+  for (let i = 0; i < roster.length; i++) {
+    jerseys.push(`${roster[i].name}\n${roster[i].number}`)
+  }
+  return jerseys
+}
+ ````
 #
 ### Do we have enough players at each position?
 We need to see the number of players at each position, so that we can make sure that we have all the players we need.
@@ -111,6 +124,19 @@ We need to see the number of players at each position, so that we can make sure 
   - For instance, in the whole roster, there are 6 players who have position `'c'`, so the function should return 6, as shown:
 
 `countPlayersAtPosition(roster, 'c') //=> 6`
+
+#### Solution 
+````
+function countPlayersAtPosition(roster, position) {
+  let count = 0
+  for (let i = 0; i < roster.length; i++) {
+    if (roster[i].position === position) {
+      count += 1
+    }
+  }
+  return count
+}
+````
   #### Part 2: Given the roster and a list of positions, return an object with the count for each position
 Write a function `countPositions` that accepts two arguments, the roster as an array, and an array of strings representing positions.
 
