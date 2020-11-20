@@ -22,17 +22,17 @@
     `Object.keys(data: object): Array(string)`
   - Iterate through each key of an object.
   
-    ```
-    for (const property in object) {
-      console.log(`${property}: ${object[property]}`);
+    ```for (const property in object) {
+      console.log(`${property}: ${object[property]}`);`
     }
     ```
-    ```const exampleJson = {
-          "first-name": "Chanda",
-          "last-name": "Hubbard",
-          "city-and-state": "Oakland, CA",
-          "zip": "12345-1234"
-       };
+    
+```const exampleJson = {
+      "first-name": "Chanda",
+      "last-name": "Hubbard",
+      "city-and-state": "Oakland, CA",
+      "zip": "12345-1234"
+     };
 ```
 
 ```function transformKebabCaseToCamelCase(data) {
