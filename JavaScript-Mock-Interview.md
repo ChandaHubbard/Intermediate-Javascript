@@ -26,7 +26,7 @@
       console.log(`${property}: ${object[property]}`);
     }
     ```
-   
+#   
 ```
 const exampleJson = `{
   "first-name": "Chanda",
