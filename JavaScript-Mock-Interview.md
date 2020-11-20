@@ -28,12 +28,12 @@
     ```
 #   
 ```
-const exampleJson = `{
+const exampleJson = {
   "first-name": "Chanda",
   "last-name": "Hubbard",
   "city-and-state": "Oakland, CA",
   "zip": "12345-1234"
-}`;
+};
 ```
 
 ```
