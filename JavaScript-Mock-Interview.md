@@ -22,7 +22,8 @@
     `Object.keys(data: object): Array(string)`
   - Iterate through each key of an object.
   
-    ```for (const property in object) {
+    ```
+    for (const property in object) {
       console.log(`${property}: ${object[property]}`);`
     }
     ```
@@ -33,9 +34,10 @@
       "city-and-state": "Oakland, CA",
       "zip": "12345-1234"
      };
-```
+ ```
 
-```function transformKebabCaseToCamelCase(data) {
+```
+function transformKebabCaseToCamelCase(data) {
   // Example is that if I was passed '{"first-name": "Fred"}', the result
   // should be '{"firstName": "Fred"}'
   return data;
