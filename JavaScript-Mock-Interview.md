@@ -8,11 +8,7 @@
 - typeof: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 - instanceof: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
 
-### Extra Credit
-Learn how to do this problem using Maps: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
-
 # Part I
-
 
 - Given that you have an already valid JSON string where the keys are
   all kebab-case, 
@@ -104,18 +100,18 @@ Solve Part II of the problem using this as your example JSON:
 
 ```
 const exampleJsonExpanded = `[{
-"first-name": "Jeff",
-"last-name": "Green",
+"first-name": "Chanda",
+"last-name": "Hubbard",
 "address": {
-"city-and-state": "Boston, MA",
+"city-and-state": "Oakland, CA",
 "zip": "12345-1234"
 },
 "pets": [{
 "pet-gender": "male",
-"pet-name": "Bruno"
+"pet-name": "Jamaal"
 }, {
 "pet-gender": "female",
-"pet-name": "Lana-Kane"
+"pet-name": "Taraji"
 }]
 }]`;
 ```
