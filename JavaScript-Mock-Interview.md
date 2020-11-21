@@ -49,8 +49,6 @@ document.getElementById("app").innerHTML = result;
 ```
 ## My Solution 
 
-
-
 ```
 function transformKebabCaseToCamelCase(data) {
   // Example is that if I was passed '{"first-name": "Fred"}', the result
@@ -79,6 +77,38 @@ transformKebabCaseToCamelCase(exampleJson)
 '"lastName": "Hubbard"'
 '"cityAndState": "Oakland, CA"'
 '"zip": "12345-1234"'
+```
+
+## Optimal Solution
+```
+function transformKebabCaseToCamelCase(data) { 
+let dashLower = /-([a-z])/g;
+let toUpper = function(m, l) {
+  return l.toUpperCase();
+};
+let dashToUpper = function(data) {
+  return data.replace(dashLower, toUpper);
+};
+
+  if(typeof data !== "object") return data;
+  var newObj = {};
+  Object.keys(data).forEach(function(name) {
+    (newObj[dashToUpper(name)]) = transformKebabCaseToCamelCase(data[name]);
+  });
+  return newObj;
+};
+
+```
+
+### Output
+
+```
+{
+  firstName: 'Chanda',
+  lastName: 'Hubbard',
+  cityAndState: 'Oakland, CA',
+  zip: '12345-1234'
+}
 ```
 
 ### Extra Credit
