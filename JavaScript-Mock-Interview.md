@@ -57,7 +57,13 @@ function transformKebabCaseToCamelCase(data) {
   // should be '{"firstName": "Fred"}'
   Object.entries(data).forEach(entry => {
     const [key, value ] = entry
-    let toCamel= (x) => (`${JSON.parse(JSON.stringify(x).split("-").map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(""))}`)
+    let toCamel= (x) => (`${JSON
+                              .parse(JSON
+                                  .stringify(x)
+                                  .split("-")
+                                  .map(x => x.charAt(0)
+                                      .toUpperCase() + x.slice(1))
+                                      .join(""))}`)
     console.log(`"${toCamel(key)}": "${value}"`)
   })
 }
