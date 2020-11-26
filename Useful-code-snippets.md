@@ -56,4 +56,10 @@ for(const age in names) {
 return names
 ```
 ## 
-
+Swap Object keys & values
+```
+function invert(o) {
+	let switcheroo = Object.entries(o).reduce((r, [k, v]) => (r[v]=k, r), {})
+	return switcheroo
+}
+```
