@@ -1,4 +1,4 @@
-#Useful Object Code Snippets
+# Useful Object Code Snippets
 
 Try finding your ancestors and offspring with code.
 
@@ -19,12 +19,12 @@ You are generation 0. In the case of 0 (male or female), return "me!".
 Generation	|Male|	Female
 --- | --- | ---
 -3	|great grandfather |	great grandmother
--2	grandfather	grandmother
--1	father	mother
-0	me!	me!
-1	son	daughter
-2	grandson	granddaughter
-3	great grandson	great granddaughte
+-2	|grandfather|	grandmother
+-1	|father	|mother
+0	|me!	|me!
+1	|son|	daughter
+2	|grandson|	granddaughter
+3	|great grandson	|great granddaughter
 
 ### Input 
 ```
@@ -41,7 +41,7 @@ function generation(x, y) {
 return generation[x][y]
 }
 ```
-### Output
+
 
 ## 
 
