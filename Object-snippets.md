@@ -1,4 +1,4 @@
-# Useful Object Code Snippets
+# Useful Code Snippets
 
 Try finding your ancestors and offspring with code.
 
@@ -43,5 +43,17 @@ return generation[x][y]
 ```
 
 
+## 
+
+`const removeDups = arr => [...new Set(arr)]`
+
+##
+
+```
+for(const age in names) {
+	names[age] += Math.abs(n)
+	}
+return names
+```
 ## 
 
