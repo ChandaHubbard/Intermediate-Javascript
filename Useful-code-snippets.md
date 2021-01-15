@@ -47,7 +47,14 @@ return generation[x][y]
 
 `const removeDups = arr => [...new Set(arr)]`
 
-##
+## `for...in`
+
+```
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+}
+```
+
 
 ```
 for(const age in names) {
