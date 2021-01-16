@@ -1,4 +1,5 @@
 # Meal Maker Objects Project
+- implement the `get()` and `set()` methods
 
 ````
 let menu = {
