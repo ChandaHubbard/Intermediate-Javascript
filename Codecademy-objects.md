@@ -1,5 +1,5 @@
 # Meal Maker Objects Project
-- implement the `get()` and `set()` methods
+- implement the `set()` methods
 
 ````
 let menu = {
@@ -15,9 +15,15 @@ let menu = {
   mains: [],
   desserts: [] 
   },
-  get appetizers() {}, 
-  get mains() {}, 
-  get desserts() {}, 
+  get appetizers() {
+    return this._appetizers
+  }, 
+  get mains() {
+    return this._mains
+    }, 
+  get desserts() {
+    return this._desserts
+    }, 
   set appetizers(appetizerIn) {},
   set mains(mainIn) {  },
   set desserts(dessertIn) {},
@@ -51,4 +57,77 @@ menu.addDishToCourse('desserts', 'Apple Blossom', 5.99);
 
 let randomMeal = menu.generateRandomMeal()
 console.log(randomMeal)
+````
+
+## Team Stats
+
+ ````
+ let team = {
+  _players: [
+    {
+  firstName: 'Steph',
+  lastName: 'Curry',
+  age: 32
+},
+{
+  firstName: 'Draymond',
+  lastName: 'Green',
+  age: 32
+},
+{
+  firstName: 'Klay',
+  lastName: 'Thompson',
+  age: 30
+}
+],
+  _games: [
+    {
+  opponent: 'Nets',
+  teamPoints: 120,
+  opponentPoints: 80
+},
+{
+  opponent: 'Bucks',
+  teamPoints: 115,
+  opponentPoints: 114
+},
+{
+  opponent: 'Celtics',
+  teamPoints: 95,
+  opponentPoints: 87
+}
+  ],
+  get players() {
+    return this._players
+  },
+  get games(){
+    return this._games
+  },
+  addPlayer(firstName, lastName, age) {
+    let player = {
+      firstName,
+      lastName,
+      age
+    }
+    this.players.push(player)
+  },
+  addGame(opponent, teamPoints, opponentPoints){
+    let game = {
+      opponent, 
+      teamPoints, 
+      opponentPoints
+    }
+    this.games.push(game)
+  }
+};
+
+team.addPlayer('Steph', 'Curry', 28)
+team.addPlayer('Lisa', 'Leslie', 44)
+team.addPlayer('Bugs', 'Bunny', 76)
+team.addGame('Rockets', 100, 28)
+team.addGame('Trailblazers', 108, 110)
+team.addPlayer('Lakers', 120, 135)
+
+console.log(team.players)
+console.log(team.games)
 ````
