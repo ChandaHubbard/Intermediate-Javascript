@@ -1,4 +1,4 @@
-# TypeScript Project - Codecademy
+# TypeScript Project - Codecademy - "Restaurant Orders"
 
 ## index.ts
 ````
@@ -189,4 +189,158 @@ Lula Bagel 🥯
 - Turkey Bacon Bagel: 6.99
 - Lox Cream Cheese Bagel: 9.99
 - Pastrami Swiss Bagel: 7.99
+````
+
+# TypeScript Project - Codecademy - "Unionversity"
+
+## index.ts
+````
+import courses from './courses';
+import studyGroups from './studyGroups';
+
+type Course = {
+  id: number;
+  studyGroupId: number;
+  title: string;
+  keywords: string[];
+  eventType: string;
+}
+
+type StudyGroup = {
+    id: number;
+    courseId: number;
+    title: string;
+    keywords: string[];
+    eventType: string;
+  }
+
+type SearchEventOptions = {
+  query: string | number;
+  eventType: 'courses' | 'groups';
+}
+
+let enrolledEvents: (Course | StudyGroup)[] = []
+
+function searchEvents(options: SearchEventOptions){
+  const events: (Course | StudyGroup)[] = options.eventType === 'courses' ? courses: studyGroups;
+  return events.filter((event: Course | StudyGroup) => {
+    if(typeof options.query === 'number') {
+      return event.id === options.query;
+    }
+    if(typeof options.query === 'string') {
+      return event.keywords.includes(options.query)
+    }
+  })
+}
+
+
+function enroll(event: Course | StudyGroup) {
+ enrolledEvents = [...enrolledEvents, event];
+}
+
+const searchResults = searchEvents({query: 'art', eventType: 'courses'})
+console.log(searchResults)
+
+enroll(searchResults[0])
+
+console.log(enrolledEvents)
+````
+## courses.ts
+
+````
+const courses = [
+  {
+    id: 1,
+    studyGroupId: 1,
+    title: 'Improvisational Arts Lab',
+    keywords: ['improv', 'art', 'performance', 'lab'],
+    eventType: 'course',
+  },
+  {
+    id: 2,
+    studyGroupId: 2,
+    title: 'Research Methods 1',
+    keywords: ['lab', 'research', 'science', 'self-study'],
+    eventType: 'course',
+  },
+  {
+    id: 3,
+    studyGroupId: 3,
+    title: '19th Century Art',
+    keywords: ['1800s', 'art', 'history'],
+    eventType: 'course',
+  },
+];
+
+export default courses;
+````
+## studyGroups.ts
+
+````
+const studyGroups = [
+  {
+    id: 1,
+    courseId: 1,
+    title: 'Improvisational Arts Lab Study Group',
+    keywords: ['improv', 'art', 'performance', 'lab'],
+    eventType: 'group',
+  },
+  {
+    id: 2,
+    courseId: 2,
+    title: 'Research Methods 1 Study Group',
+    keywords: ['lab', 'research', 'science', 'self-study'],
+    eventType: 'group',
+  },
+  {
+    id: 3,
+    courseId: 3,
+    title: '19th Century Art Study Group',
+    keywords: ['1800s', 'art', 'history'],
+    eventType: 'group',
+  },
+];
+
+export default studyGroups;
+````
+## tsconfig.json
+
+````
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs"
+  },
+  "include": ["**/*.ts"]
+}
+````
+
+## output
+````
+[
+  {
+    id: 1,
+    studyGroupId: 1,
+    title: 'Improvisational Arts Lab',
+    keywords: [ 'improv', 'art', 'performance', 'lab' ],
+    eventType: 'course'
+  },
+  {
+    id: 3,
+    studyGroupId: 3,
+    title: '19th Century Art',
+    keywords: [ '1800s', 'art', 'history' ],
+    eventType: 'course'
+  }
+]
+[
+  {
+    id: 1,
+    studyGroupId: 1,
+    title: 'Improvisational Arts Lab',
+    keywords: [ 'improv', 'art', 'performance', 'lab' ],
+    eventType: 'course'
+  }
+]
+$
 ````
