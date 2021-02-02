@@ -70,3 +70,5 @@ function invert(o) {
 	return switcheroo
 }
 ```
+## The Box Model - CSS
+![](https://content.codecademy.com/courses/freelance-1/unit-4/diagram-boxmodel.svg)
