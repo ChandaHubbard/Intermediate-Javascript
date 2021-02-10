@@ -1,4 +1,5 @@
 # Core Redux Concepts
+[Redux Documentation](https://redux.js.org/introduction/core-concepts)
 
 Redux applications are built upon a one-way flow of data model and are managed by the store:
 - The state is the set of data values that describes the application. It is used to render the user interface (UI).
